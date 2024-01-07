@@ -55,7 +55,6 @@ def train(params:argparse.Namespace):
     # training
     with tqdm(dataloader, dynamic_ncols=True) as tqdmDataLoader:
         for img, lab in tqdmDataLoader:
-            print("hihihi")
             b = img.shape[0]
             optimizer.zero_grad()
             x_0 = img

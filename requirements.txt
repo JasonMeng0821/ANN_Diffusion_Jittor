@@ -1,0 +1,9 @@
+blobfile
+jittor
+mpi4py
+numpy
+scipy
+requests
+tqdm
+tensorflow
+tf2onnx
