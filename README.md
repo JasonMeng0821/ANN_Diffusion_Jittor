@@ -60,9 +60,7 @@ python3 train.py --model DiT-XL/2 --data-path ./imagenet --image-size 256 --batc
 例如，要生成10000张ImageNet 256x256、时间步长为250，分类器尺度为10.0的采样图片，可以运行以下命令：
 
 ```
-
 python3 classifier_sample.py --batch_size 8 --num_samples 10000 --timestep_respacing 250 --attention_resolutions 32,16,8 --class_cond True --diffusion_steps 1000 --image_size 256 --learn_sigma True --noise_schedule linear --num_channels 256 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_scale_shift_norm True --classifier_scale 10.0 --classifier_path path/to/classifier.pt --model_path model_path /path/to/model.pt
-
 ```
 
 该脚本将生成一个.npz文件，其中包含生成的采样图片。该文件的大小约为1.8GB。
@@ -77,7 +75,6 @@ python3 classifier_sample.py --batch_size 8 --num_samples 10000 --timestep_respa
 例如，要生成10000张ImageNet 256x256、使用DDIM、时间步长为25、分类器尺度为1.0的采样图片，可以运行以下命令：
 
 ```
-
 python3 classifier_sample.py --batch_size 8 --num_samples 64 --timestep_respacing ddim25 --use_ddim True --attention_resolutions 32,16,8 --class_cond True --diffusion_steps 1000 --image_size 256 --learn_sigma True --noise_schedule linear --num_channels 256 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_scale_shift_norm True --classifier_scale 10.0 --classifier_path path/to/classifier.pt --model_path model_path /path/to/model.pt
 ```
 
@@ -96,7 +93,6 @@ python3 classifier_sample.py --batch_size 8 --num_samples 64 --timestep_respacin
 
 
 ```
-
 python3 free_sample.py --attention_resolutions 32,16,8 --image_size 256 --learn_sigma True --noise_schedule linear --num_channels 256 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_scale_shift_norm True --cmodel_path /path/to/conditional_model.pt  --ucmodel_path /path/to/unconditional_model.pt --batch_size 60 --num_samples 10000 --timestep_respacing ddim25 --use_ddim True --w 3
 ```
 
