@@ -98,7 +98,7 @@ python3 free_sample.py --attention_resolutions 32,16,8 --image_size 256 --learn_
 
 ### DiT模型采样
 
-Load AutoEncoder模型的方法：将vae模型放在`./stabilityai`下（VAE模型位于清华云盘，链接见“实验采样结果”部分）。
+Load AutoEncoder模型的方法：将vae模型放在`./stabilityai`下，VAE模型位于[清华云盘](https://cloud.tsinghua.edu.cn/d/f020ff03fb4d4362804d/)。
 
 将预训练模型放在`./pretrained_models`下。
 
@@ -119,9 +119,11 @@ ImageNet 256x256 标准参考图片（VIRTUAL_imagenet256_labeled.npz）: https:
 
 进入evaluations文件夹，运行evaluator.py脚本，它需要两个参数：标准参考图片、采样图片。该脚本将下载用于评估的InceptionV3模型到当前工作目录（如果尚未存在）。该文件大约为100MB。
 
+预训练InceptionV3模型也已上传至[清华云盘](https://cloud.tsinghua.edu.cn/d/f020ff03fb4d4362804d/)。
+
 ```
 python3 evaluator.py VIRTUAL_imagenet256_labeled.npz path/to/yoursamples.npz
 ```
 
 ## 实验采样结果
-由于采样文件过大，我们将其上传至[清华云盘](https://cloud.tsinghua.edu.cn/d/f020ff03fb4d4362804d/)中，可以查看和下载。
+由于采样文件过大，我们将其保留在服务器（root@jittor05.randonl.me）上。采样文件位于`/root/diffusion-jittor-mj/images`，可以登录查看。
